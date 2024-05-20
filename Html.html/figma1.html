@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!--tailwind cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--font awesome link-->
+</head>
+
+<body>
+    <div class="bg-orange-50 fixed w-screen md:w-screen lg:w-screen ">
+        <nav class="flex w-auto px-5 justify-evenly md:flex md:justify-evenly  lg:flex lg:justify-evenly bg-orange-50">
+            <img src="../Images/images/logo.png" class="h-7 mt-3 md:h-8 lg:h-8 lg:mt-4" alt="logo">
+            <div class=" left-0 top-[13%] flex-col items-end pr-8 w-full md:flex py-4 md:space-x-16 lg:space-x-40">
+                <ul id="sidebar"
+                    class="md:hidden hidden  lg:hidden sidebar fixed top-0 right-0 h-[100vh] w-60 z-30 bg-orange-50 flex-col justify-start shadow-xl gap-6 py-3 text-base">
+                    <li id="hide">
+                        <a class="px-3" href="#"><i class="fa-solid fa-xmark fa-2xl"></i></a>
+                    </li>
+                    <li class="px-2 hover:bg-cyan-100 hover:font-bold">Home</li>
+                    <li class="px-2 hover:bg-cyan-100 hover:font-bold">About Us</li>
+                    <li class="px-2 hover:bg-cyan-100 hover:font-bold">Courses</li>
+                    <li class="px-2 hover:bg-cyan-100 hover:font-bold">Our Service</li>
+                    <li class="px-2 hover:bg-cyan-100 hover:font-bold">Contact Us</li>
+                </ul>
+
+                <ul class="hidden md:flex md:text-sm lg:text-sm">
+                    <li class="md:px-2">Home</li>
+                    <li class="md:px-2">About Us</li>
+                    <li class="md:px-2">Courses</li>
+                    <li class="md:px-2">Our Service</li>
+                    <li class="md:px-2">Contact Us</li>
+
+                </ul>
+            </div>
+            <ul class="px-4 py-2 md:hidden lg:hidden">
+                <li id="show">
+                    <a class="" href="#"><i class="fa-solid fa-bars fa-xl"></i></a>
+                </li>
+            </ul>
+
+            <button type="button" id="login"
+                class="bg-[#4D2C5E] text-white text-sm rounded-2xl w-40 my-2 md:w-32 md:my-2">Sign in</button>
+
+        </nav>
+
+    </div>
+
+    <div id="loginpage"
+        class="loginpage hidden  justify-center items-center  bg-orange-50 w-96 fixed top-0 right-0 h-[100vh]  z-30">
+        <div class="w-96 p-6 shadow-lg bg-white rounded-sm ">
+            <div class="flex">
+                <h1 class="text-3xl block text-center font-semibold ml-32">
+                    <i class="fa-solid fa-user"></i>Login
+                </h1>
+                <ul>
+                    <li id="close">
+                        <a class="ml-16" href="#"><i class="fa-solid fa-xmark fa-2xl"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <hr class="mt-3">
+            <div class="mt-3">
+                <label for="username" class="block text-base mb-2">Username</label>
+                <input type="text" id="username"
+                    class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                    placeholder="Enter username...">
+            </div>
+            <div class="mt-3">
+                <label for="password" class="block text-base mb-2">Password</label>
+                <input type="text" id="password"
+                    class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                    placeholder="Enter password...">
+            </div>
+            <div class="mt-3 flex justify-between items-center">
+                <div>
+                    <input type="checkbox">
+                    <label>Remember Me?</label>
+                </div>
+                <div>
+                    <a href="#" class="text-indigo-800 font-semibold">Forgot Password?</a>
+                </div>
+            </div>
+            <div class="mt-5">
+                <button type="submit"
+                    class="border-2 border-orange-400 bg-orange-100 text-black py-1 w-full rounded-md hover:bg-transparent hover:text-orange-500 font-semibold">Login</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pt-16 md:pt-28 md:flex md:justify-evenly lg:flex lg:justify-evenly md:w-[100%] lg:w-[100%] lg:px-4">
+        <div class="md:w-[50%] md:px-2 lg:w-[50%] lg:px-2 content-center">
+
+            <h1 class="text-2xl text-center font-bold md:text-left md:px-4">The <span
+                    class="text-orange-500 font-bold">Smart</span>
+                <br>Choice
+                For <span class="text-orange-500 font-bold">Future</span>
+            </h1>
+            <p class="text-xs justify-around px-4">Elearn is a global training provider based across the UK that
+                specialises
+                in accredited and bespoke training courses. We crush the...</p>
+            <div class="flex bg-white rounded-3xl h-10  px-2 mx-4 mt-6 justify-between shadow-xl  xl:w-1/2">
+                <section class="w-full h-10 flex items-center">
+                    <span class="w-10 h-full flex items-center">
+                        <i class="fa-solid fa-magnifying-glass text-black"></i>
+                    </span>
+                    <input type="text" class="w-full h-full font-medium md:pl-2 focus:outline-none"
+                        placeholder="Search for a location...">
+                    <button
+                        class=" bg-blue-950 flex text-white rounded-2xl text-sm h-8 w-32 pt-1  px-2 ">Continue</button>
+                </section>
+            </div>
+
+        </div>
+        <div class="flex content-center mt-6 justify-around mx-3 md:w-[50%] lg:w-[50%] ">
+
+            <img src="../Images/images/OBJECTS.png" class="h-64 w-64 lg:mx-28" alt="">
+        </div>
+    </div>
+    </div>
+
+    <div class="bg-purple-950 content-center mx-4 mt-4 md:flex md:w-[90%] md:mx-[5%] lg:flex lg:w-[90%] lg:mx-[5%]">
+        <div class="flex mx-4 my-4 md:w-[30%] md:px-2 lg:w-[30%] lg:px-2">
+            <img src="../Images/images/Rectangle 41.png" class="relative h-16 my-4" alt="">
+            <img src="../Images/images/online-test 1.png" class="h-11 mx-3 my-6 absolute" alt="">
+            <div class="mx-4 my-3">
+                <h4 class="text-white font-bold">Learn The Latest Skills</h4>
+                <p class="text-slate-300 text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi,
+                    ratione.</p>
+            </div>
+        </div>
+        <div class="flex mx-4 my-4 md:w-[30%] md:px-2 lg:w-[30%] lg:px-2">
+            <img src="../Images/images/Rectangle 41.png" class="relative h-16 my-4" alt="">
+            <img src="../Images/images/exam 1.png" class="h-11 mx-3 my-6 absolute" alt="">
+            <div class="mx-4 my-3">
+                <h4 class="text-white font-bold">Learn The Latest Skills</h4>
+                <p class="text-slate-300 text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi,
+                    ratione.</p>
+            </div>
+        </div>
+        <div class="flex mx-4 my-4 md:w-[30%] md:px-2 lg:w-[30%] lg:px-2">
+            <img src="../Images/images/Rectangle 41.png" class="relative h-16 my-4" alt="">
+            <img src="../Images/images/certification 1.png" class="h-11 mx-3 my-6 absolute" alt="">
+            <div class="mx-4 my-3">
+                <h4 class="text-white font-bold">Learn The Latest Skills</h4>
+                <p class="text-slate-300 text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Nisi,
+                    ratione.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-around content-center pt-5 mx-6 md:my-6 lg:my-6 ">
+        <img src="../Images/images/casual-life-3d-idea-lamp 1.png" class="h-14 md:h-16 lg:h-20" alt="">
+        <div class="text-center mx-2">
+            <h4 class="font-bold md:text-2xl  lg:text-3xl">Our Tracks</h4>
+            <p class="text-xs text-slate-500 md:text-sm lg:text-sm">Lorem Ipsum is simply dummy text of the printing.
+            </p>
+        </div>
+        <img src="../Images/images/Group (8).png" class="h-14 md:h-16 lg:h-20" alt="">
+    </div>
+    <div class="content-center md:flex md:justify-evenly lg:flex ">
+        <div
+            class="shadow-2xl border-solid border-white w-72 h-64 rounded-xl mt-8 mx-auto md:mt-0 md:w-60 md:mx-3 lg:mt-0">
+            <img src="../Images/images/Group 337.png" class="h-36 w-64 mx-4 pt-2 md:w-56 md:mx-2" alt="">
+            <div class="flex mx-4 justify-between mt-2 md:mx-2 md:justify-between">
+                <p class="text-xs text-slate-500">UI/UX Design</p>
+                <img src="../Images/images/Group 345.png" class="h-3" alt="">
+            </div>
+            <p class="text-xs font-bold mx-4 md:mx-2">UI/UX Design for Beginners</p>
+            <p class="text-orange-500 text-xs font-bold mx-4 md:mx-2">$98</p>
+            <hr>
+            <div class="flex mt-3">
+                <img src="../Images/images/time-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">22hr 30min</p>
+                <img src="../Images/images/video-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">34 courses</p>
+                <img src="../Images/images/download-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">250 Sales</p>
+            </div>
+            <button class="bg-orange-400 text-white text-sm w-24 h-8 rounded-2xl mx-24 mt-3">Join Course</button>
+        </div>
+        <div
+            class="shadow-2xl border-solid border-white w-72 h-64 rounded-xl mt-8 mx-auto md:mt-0 md:w-60 md:mx-3 lg:mt-0">
+            <img src="../Images/images/Group 338.png" class="h-36 w-64 mx-4 pt-2 md:w-56 md:mx-2" alt="">
+            <div class="flex mx-4 justify-between mt-2 md:mx-2 md:justify-between">
+                <p class="text-xs text-slate-500">UI/UX Design</p>
+                <img src="../Images/images/Group 345.png" class="h-3" alt="">
+            </div>
+            <p class="text-xs font-bold mx-4 md:mx-2">UI/UX Design for Beginners</p>
+            <p class="text-orange-500 text-xs font-bold mx-4 md:mx-2">$98</p>
+            <hr>
+            <div class="flex mt-3">
+                <img src="../Images/images/time-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">22hr 30min</p>
+                <img src="../Images/images/video-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">34 courses</p>
+                <img src="../Images/images/download-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">250 Sales</p>
+            </div>
+            <button class="bg-orange-400 text-white text-sm w-24 h-8 rounded-2xl mx-24 mt-3">Join Course</button>
+        </div>
+
+        <div
+            class="shadow-2xl border-solid border-white w-72 h-64 rounded-xl mt-8 mx-auto md:mt-0 md:w-60 md:mx-3 lg:mt-0">
+            <img src="../Images/images/Group 339.png" class="h-36 w-64 mx-4 pt-2 md:w-56 md:mx-2" alt="">
+            <div class="flex mx-4 justify-between mt-2 md:mx-2 md:justify-between">
+                <p class="text-xs text-slate-500">UI/UX Design</p>
+                <img src="../Images/images/Group 345.png" class="h-3" alt="">
+            </div>
+            <p class="text-xs font-bold mx-4 md:mx-2">UI/UX Design for Beginners</p>
+            <p class="text-orange-500 text-xs font-bold mx-4 md:mx-2">$98</p>
+            <hr>
+            <div class="flex mt-3">
+                <img src="../Images/images/time-svgrepo-com 1.png" class="h-3 mt-1 ml-4 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">22hr 30min</p>
+                <img src="../Images/images/video-svgrepo-com 1.png" class="h-3 mt-1 ml-3 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">34 courses</p>
+                <img src="../Images/images/download-svgrepo-com 1.png" class="h-3 mt-1 ml-3 mr-1 md:ml-2  md:mr-1" alt="">
+                <p class="text-xs text-slate-500">250 Sales</p>
+            </div>
+            <button class="bg-orange-400 text-white text-sm w-24 h-8 rounded-2xl mx-24 mt-3">Join Course</button>
+        </div>
+    </div>
+
+    <div class=" bg-orange-50 w-full mt-10 md:justify-evenly md:flex lg:flex">
+
+        <img src="../Images/images/OBJECTS (1).png" class="h-80 ml-6 pt-6 " alt="">
+
+        <div class="mt-4 pl-8">
+            <h1 class="font-bold text-purple-950 text-4xl">Premium <span
+                    class="text-orange-500 font-bold ">Learning</span> </h1>
+            <h1 class="font-bold text-purple-950 text-4xl">Experience</h1>
+            <div class="flex mt-10">
+                <div class="bg-purple-950 rounded-2xl h-14 w-14">
+                    <img src="../Images/images/hearts 1.png" class="h-8 mx-2 my-3" alt="">
+                </div>
+                <div class="px-3">
+                    <h4 class="font-bold text-purple-950 text-lg md:text-xl ">Easily Accessible</h4>
+                    <p class="text-sm text-slate-500">Learning Wll fell Very Comfortable With Courslab.</p>
+                </div>
+            </div>
+            <div class="flex mt-5 pb-6">
+                <div class="bg-purple-950 rounded-2xl h-14 w-14">
+                    <img src="../Images/images/jigsaw 1.png" class="h-8 mx-2 my-3" alt="">
+                </div>
+                <div class="px-3">
+                    <h4 class="font-bold text-purple-950 text-lg md:text-xl">Fun learning expe</h4>
+                    <p class="text-sm text-slate-500">Learning Wll fell Very Comfortable With Courslab.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-10">
+        <h2 class="font-bold text-purple-950 text-2xl text-center md:text-3xl lg:text-4xl">What Student's Say</h2>
+        <p class="text-xs text-slate-500 text-center md:text-sm lg:text-base">Lorem ipsum is simply dummy text of the
+            printing.</p>
+        <div class="content-center md:flex md:py-3 lg:flex lg:py-3 ">
+            <div class="px-5 w-96 mx-auto shadow-xl py-8">
+                <p class="text-slate-500">"Teachings of the great explore of truth, the master-builder of human
+                    happiness.
+                    no one rejects,dislikes,
+                    or avoids pleasure itself, pleasure itself"</p>
+                <div class="flex py-5">
+                    <img src="../Images/images/Ellipse 34.png" alt="">
+                    <div class="mx-4">
+                        <h5 class="font-semibold">Finaly Kirk</h5>
+                        <p class="text-xs text-slate-500">Web Developper</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-5 w-96 mx-auto shadow-xl py-10">
+                <p class="text-slate-500">"Complete account of the system and expound the actual Contrary to popular
+                    belief,
+                    Lorem Ipsum is not simply random text. It has roots"</p>
+                <div class="flex py-5">
+                    <img src="../Images/images/Ellipse 35 (1).png" alt="">
+                    <div class="mx-4">
+                        <h5 class="font-semibold">Dannette P. Cervantes</h5>
+                        <p class="text-xs text-slate-500">Web Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-5 w-96 mx-auto shadow-xl py-10">
+                <p class="text-slate-500">"There are many variations of passages of Lorem Ipsum available, but the
+                    majority
+                    have suffered alteration in some form, by injected humour"</p>
+                <div class="flex py-5">
+                    <img src="../Images/images/Ellipse 34 (2).png" alt="">
+                    <div class="mx-4">
+                        <h5 class="font-semibold">Clara R. Altman</h5>
+                        <p class="text-xs text-slate-500">UI&UX Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-around">
+        <img src="../Images/images/Group (10).png" class="h-14 w-14 mt-8" alt="">
+        <img src="../Images/images/Group 76.png" class="h-2 w-14 mt-14" alt="">
+        <img src="../Images/images/casual-life-3d-orange-planet-with-disk 1.png" class="h-8 mt-10" alt="">
+    </div>
+    <h2 class="font-bold text-purple-950 text-3xl text-center md:text-4xl lg:text-4xl">Our Tracks</h2>
+    <p class="text-xs text-slate-500 text-center">Lorem ipsum is simply dummy text of the printing.</p>
+    <div class="content-center md:flex md:py-3 md:justify-around  lg:flex lg:py-3 lg:justify-around">
+        <div
+            class="shadow-2xl border-solid border-white w-72 h-72 rounded-xl mt-10 mx-auto md:h-80 md:w-80 lg:h-80 lg:w-80">
+            <img src="../Images/images/Group 337 (1).png" class="h-36 w-64 mx-4 pt-2 md:h-40 md:w-72 md:mx-auto" alt="">
+            <h5 class="mx-4 font-semibold text-sm mt-2">Matthew E. McNatt</h5>
+            <p class="mx-4 text-xs text-slate-400 font-semibold">Professor @George Brown College</p>
+            <p class="mt-2 mx-4  text-xs text-slate-400">Ut enim ad minim veniam, quis nost exercitation ullamco laboris
+                nisi ut allquip ex commodo.</p>
+            <div class="flex mx-4 mt-6 text-xs font-semibold">
+                <p class="text-orange-500">Engineering Physics</p>
+
+                <img src="../Images/images/Instagram_logo_2016 1.png" class="h-4 ml-24" alt="">
+                <img src="../Images/images/174857 1.png" class="ml-4 h-4" alt="">
+
+
+            </div>
+        </div>
+        <div
+            class="shadow-2xl border-solid border-white w-72 h-72 rounded-xl mt-10 mx-auto md:h-80 md:w-80 lg:h-80 lg:w-80">
+            <img src="../Images/images/Group 338 (1).png" class="h-36 w-64 mx-4 pt-2 md:h-40 md:w-72 md:mx-auto" alt="">
+            <h5 class="mx-4 font-semibold text-sm mt-2">Tracy D. Wright</h5>
+            <p class="mx-4 text-xs text-slate-400 font-semibold">Professor @George Brown College</p>
+            <p class="mt-2 mx-4  text-xs text-slate-400">Ut enim ad minim veniam, quis nost exercitation ullamco laboris
+                nisi ut allquip ex commodo.</p>
+            <div class="flex mx-4 mt-6 text-xs font-semibold">
+                <p class="text-orange-500">Engineering Physics</p>
+
+                <img src="../Images/images/Instagram_logo_2016 1.png" class="h-4 ml-24" alt="">
+                <img src="../Images/images/174857 1.png" class="ml-4 h-4" alt="">
+
+
+            </div>
+        </div>
+        <div
+            class="shadow-2xl border-solid border-white w-72 h-72 rounded-xl mt-10 mx-auto md:h-80 md:w-80 lg:h-80 lg:w-80">
+            <img src="../Images/images/Group 339 (1).png" class="h-36 w-64 mx-4 pt-2 md:h-40 md:w-72 md:mx-auto" alt="">
+            <h5 class="mx-4 font-semibold text-sm mt-2">Cynthia A. Nelson </h5>
+            <p class="mx-4 text-xs text-slate-400 font-semibold">Professor @George Brown College</p>
+            <p class="mt-2 mx-4  text-xs text-slate-400">Ut enim ad minim veniam, quis nost exercitation ullamco laboris
+                nisi ut allquip ex commodo.
+            </p>
+            <div class="flex mx-4 mt-6 text-xs font-semibold">
+                <p class="text-orange-500">Engineering Physics</p>
+                <img src="../Images/images/Instagram_logo_2016 1.png" class="h-4 ml-24" alt="">
+                <img src="../Images/images/174857 1.png" class="ml-4 h-4" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bg-purple-950 mt-10 content-center ">
+        <div class="flex justify-between ">
+            <div>
+                <img src="../Images/images/Ellipse 40.png" class="absolute h-12 md:h-20 lg:h-24" alt="">
+                <img src="../Images/images/Ellipse 41.png" class="relative h-10 md:h-16 lg:h-20" alt="">
+            </div>
+            <div class="mt-10">
+                <h2 class="text-lg font-bold text-white text-center">Subscribe to our newsletter </h2>
+                <p class="text-xs text-white text-center mt-1">Lorem Ipsum is simply dummy text of the printing.</p>
+                <div
+                    class="flex bg-white rounded-3xl h-10  px-2  mt-6 justify-between shadow-xl  xl:w-80 w-72 md:w-72  items-center">
+                    <input type="text" class="w-full h-full font-medium md:pl-2 focus:outline-none rounded-3xl text-sm"
+                        placeholder="Email Address">
+                    <button class=" bg-orange-500 flex text-white rounded-2xl text-sm h-8 w-32 pt-1 px-8 ">Send</button>
+
+                </div>
+            </div>
+            <div>
+                <img src="../Images/images/Ellipse 42.png" class="absolute h-12 md:h-20 lg:h-24" alt="">
+                <img src="../Images/images/Ellipse 43.png" class="relative h-16 md:h-24 lg:h-28" alt="">
+            </div>
+        </div>
+        <div class="flex justify-between mx-6 h-14">
+            <img src="../Images/images/Group (11).png" class="" alt="">
+            <img src="../Images/images/casual-life-3d-idea-lamp 2.png" alt="">
+        </div>
+    </div>
+    <div class="bg-orange-50 w-auto mt-[10%]">
+
+        <div class="flex-col w-[100%] flex px-2 md:flex-row md:w-[100%] lg:flex-row lg:w-[100%]">
+            <div class="w-[20%] md:w-[20%] lg:w-[20%] px-4">
+                <img src="../Images/images/Group 356.png" class="w-[65%] mt-4 md:mt-2" alt="">
+                <p class="text-xs text-slate-400 w-[100%] mt-2">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                    industry. Lorem Ipsum has been the
+                    industry's standard dummy a type specimen book.</p>
+            </div>
+            <div class="w-[20%] md:w-[20%] lg:w-[20%] px-4">
+                <h5 class="text-purple-950 font-bold text-lg mt-2">Company</h5>
+                <div class="text-xs text-slate-400 mt-2">
+                    <p>About Us</p>
+                    <p class="mt-2">How to work?</p>
+                    <p class="mt-2">Popular Course</p>
+                    <p class="mt-2">Service</p>
+                </div>
+            </div>
+
+
+            <div class="w-[20%] md:w-[20%] lg:w-[20%] px-4">
+                <h5 class="text-purple-950 font-bold text-lg mt-2">Couses</h5>
+                <p class="text-slate-400 mt-2 text-xs">Categories</p>
+                <p class="text-slate-400 mt-2 text-xs">Ofline Course</p>
+                <p class="text-slate-400 mt-2 text-xs">Vidio Course</p>
+            </div>
+            <div class="w-[20%] md:w-[20%] lg:w-[20%] px-4">
+                <h5 class="text-purple-950 font-bold text-lg mt-2">Support</h5>
+                <p class="text-slate-400 mt-2 text-xs">FAQ</p>
+                <p class="text-slate-400 mt-2 text-xs">Help Center</p>
+                <p class="text-slate-400 mt-2 text-xs">Career</p>
+                <p class="text-slate-400 mt-2 text-xs">Privacy</p>
+            </div>
+            <div class="w-[20%] md:w-[20%] lg:w-[20%] px-4">
+                <h5 class="text-purple-950 font-bold text-lg mt-2">Contact Info</h5>
+                <p class="text-slate-400 mt-2 text-xs">+0913-705-3875</p>
+                <p class="text-slate-400 mt-2 text-xs">ElizabethJ@jourrapide.com</p>
+                <p class="text-slate-400 mt-2 text-xs">4808 Skinner Hollow Road Days Creek, OR 97429</p>
+            </div>
+        </div>
+
+        <hr>
+        <p class="text-slate-400 mt-2 text-xs text-center py-4">BookStore All Right Reserved, 2022</p>
+    </div>
+    <script>
+
+        let login = document.getElementById("login")
+        let close = document.getElementById("close")
+        let show = document.getElementById("show")
+        let hide = document.getElementById("hide")
+        login.addEventListener("click", function () {
+            document.querySelector("#loginpage").classList.toggle("hidden")
+        })
+        close.addEventListener("click", function () {
+            document.querySelector("#loginpage").classList.toggle("hidden")
+        })
+        show.addEventListener("click", function () {
+            document.querySelector("#sidebar").classList.toggle("hidden")
+        })
+        hide.addEventListener("click", function () {
+            document.querySelector("#sidebar").classList.toggle("hidden")
+        })
+    </script>
+
+
+</body>
+
+</html>
